@@ -1,0 +1,15 @@
+{% extends "admin/department/department.html" %}
+{% block content %}
+
+
+<fieldset><legend>ADD DEPARTMENT</legend>
+   <a href="#">Back</a>
+    <form method="POST" enctype = "multipart/form-data">
+       {% csrf_token %}
+       <table>
+         {{form.as_table}}
+       </table>
+       <input type="submit" value="save">
+   </form>
+</fieldset>
+ {% endblock %}

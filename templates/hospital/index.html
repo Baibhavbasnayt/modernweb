@@ -1,0 +1,132 @@
+{% extends 'hospital/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Health care</span> <br>
+                                    For Whole Family </h3>
+                                <p>In healthcare sector, service excellence is the facility of <br> the hospital as
+                                    healthcare service provider to consistently.</p>
+                                <a href="Department.html" class="boxed-btn3">Check Our Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Health care</span> <br>
+                                    For wHole Family </h3>
+                                <p>In healthcare sector, service excellence is the facility of <br> the hospital as
+                                    healthcare service provider to consistently.</p>
+                                <a href="Department.html" class="boxed-btn3">Check Our Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> <span>Health care</span> <br>
+                                    For Hole Family </h3>
+                                <p>In healthcare sector, service excellence is the facility of <br> the hospital as
+                                    healthcare service provider to consistently.</p>
+                                <a href="Department.html" class="boxed-btn3">Check Our Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+
+    <!-- service_area_start -->
+    <div class="service_area">
+        <div class="container p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="flaticon-electrocardiogram"></i>
+                        </div>
+                        <h3>Hospitality</h3>
+                        <a href="#" class="boxed-btn3-white">Apply For a Bed</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="flaticon-emergency-call"></i>
+                        </div>
+                        <h3>Emergency Care</h3>
+                        <a href="#" class="boxed-btn3-white">01-55-46999</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service">
+                        <div class="icon">
+                            <i class="flaticon-first-aid-kit"></i>
+                        </div>
+                        <h3>Chamber Service</h3>
+                        <a href="{% url 'appointmentadd' %}" class="boxed-btn3-white">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service_area_end -->
+
+
+    <!-- welcome_docmed_area_start -->
+    <div class="welcome_docmed_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_thumb">
+                        <div class="thumb_1">
+                            <img src="{% static 'img/about/1.png' %}" alt="">
+                        </div>
+                        <div class="thumb_2">
+                            <img src="{% static 'img/about/2.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_docmed_info">
+                        <h2>Welcome to Star Hospital</h2>
+                        <h3>Best Care For Your <br>
+                                Good Health</h3>
+                        <p>A leading medical specialty centre, star hospital was established in 1994 by Chaudhary Group, one of the leading corporate houses in Nepal. Star hospital is a 150 bed; state-of-the-art, super-specialty hospital located in Sanepa.</p>
+                        <ul>
+                            <li> <i class="flaticon-right"></i> Apartments frequently or motionless. </li>
+                            <li> <i class="flaticon-right"></i> Special treatment with care and love.</li>
+                            <li> <i class="flaticon-right"></i> Professional doctors from different departments.</li>
+                        </ul>
+                        <a href="#" class="boxed-btn3-white-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'hospital/department_list.html' %}
+
+    <!-- welcome_docmed_area_end -->
+    {% include 'hospital/doctor_list.html' %}
+
+{% endblock %}

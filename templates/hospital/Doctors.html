@@ -1,0 +1,77 @@
+{% extends 'hospital/base.html' %}
+
+{% block content %}
+
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg_2 bradcam_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Doctors</h3>
+                        <p><a href="index.html">Home /</a> Doctors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+{% include 'hospital/doctor_list.html' %}
+
+ <!-- expert_doctors_area_start -->
+    <div class="doc_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Doctors Shedule</h2>
+                </div>
+            </div>
+            <div class="row">
+    <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Specialist</th>
+      <th scope="col">Available Day</th>
+      <th scope="col">Available Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Adam ryken</td>
+      <td>Dermatologists</td>
+      <td>Monday - Thursday</td>
+      <td>10 am - 1 pm</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>jackson Fardan</td>
+      <td>Ophthalmologist</td>
+      <td>Wednesday - Friday</td>
+      <td>9 am - 12 pm </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Nimon Jackson</td>
+      <td>Psychiatrist</td>
+      <td>Sunday - Friday</td>
+      <td>8 am - 10 pm</td>
+    </tr>
+     <tr>
+      <th scope="row">4</th>
+      <td>Sneha sykra</td>
+      <td>Pediatrician</td>
+      <td>Tuesday - Friday</td>
+      <td>7 am - 10 pm</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+{% endblock %}

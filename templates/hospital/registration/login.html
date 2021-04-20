@@ -1,0 +1,27 @@
+{% extends 'hospital/base.html' %}
+
+{% block content %}
+
+<div>
+    <div class="container">
+        <div class="col-md-7 card mb-4 mt-3 left top bg-light shadow-lg">
+            <h1>Welcome to NEPSTAY.</h1>
+            <h2 style="margin-top: 20px">Please login to continue.</h2>
+            <form method="post"  style="margin-top: 50px;">
+                    {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form.username|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.password|as_crispy_field }}
+                    </div>
+                </div>
+
+                <button type="submit" class="btn bg-success text-center pl-5 pr-5 text-white">Log In</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

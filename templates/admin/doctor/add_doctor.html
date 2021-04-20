@@ -1,0 +1,14 @@
+{% extends 'admin/doctor/doctor.html' %}
+
+{% block content %}
+
+<fieldset style="text-align: center;"><legend>ADD DOCTOR</legend>
+    <form method="POST" enctype = "multipart/form-data">
+       {% csrf_token %}
+       <table>
+         {{form.as_table}}
+       </table>
+       <input type="submit" value="Save">
+   </form>
+</fieldset>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "admin/department/department.html" %}
+{% block content %}
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+        <tbody>
+        {% for dept in get_department_data %}
+            <tr>
+                <td>{{ dept.id }}</td>
+                <td>{{ dept.name }}</td>
+                <td>{{ dept.pictures.url }}</td>
+                <td>
+                    <a href="{% url 'updatedepartment' id=dept.id %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="{% url 'deletedepartment' id=dept.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+{% endblock %}

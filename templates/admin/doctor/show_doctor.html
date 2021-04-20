@@ -1,0 +1,29 @@
+{% extends "admin/doctor/doctor.html" %}
+
+{% block content %}
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Speciality</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+        <tbody>
+        {% for expert in get_doctor_data %}
+            <tr>
+                <td>{{ expert.id }}</td>
+                <td>{{ expert.name }}</td>
+                <td>{{ expert.speciality }}</td>
+                <td>{{ expert.picture.url }}</td>
+                <td>
+                    <a href="{% url 'updatedoctor' id=expert.id %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="{% url 'deletedoctor' id=expert.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "admin/appointment/appointment.html" %}
+{% block content %}
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Notes</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+        <tbody>
+        {% for pat in get_patient_data %}
+            <tr>
+                <td>{{ pat.id }}</td>
+                <td>{{ pat.name }}</td>
+                <td>{{ pat.phone }}</td>
+                <td>{{ pat.date }}</td>
+                <td>{{ pat.time }}</td>
+                <td>{{ pat.note }}</td>
+
+                <td>
+                    <a href="{% url 'updateappointment' id=pat.id %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="{% url 'deleteappointment' id=pat.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+{% endblock %}

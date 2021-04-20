@@ -1,0 +1,58 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg bradcam_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>About Us</h3>
+                        <p><a href="{% url 'index' %}">Home /</a> About</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+
+     <!-- welcome_docmed_area_start -->
+    <div class="welcome_docmed_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_thumb">
+                        <div class="thumb_1">
+                            <img src="{% static 'img/about/1.png' %}" alt="">
+                        </div>
+                        <div class="thumb_2">
+                            <img src="{% static 'img/about/2.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome_docmed_info">
+                        <h2>Welcome to Star Hospital</h2>
+                        <h3>Best Care For Your <br>
+                                Good Health</h3>
+                        <p>A leading medical specialty centre, star hospital was established in 1994 by Chaudhary Group, one of the leading corporate houses in Nepal. Star hospital is a 150 bed; state-of-the-art, super-specialty hospital located in Sanepa.</p>
+                        <ul>
+                            <li> <i class="flaticon-right"></i> Apartments frequently or motionless. </li>
+                            <li> <i class="flaticon-right"></i> Special treatment with care and love.</li>
+                            <li> <i class="flaticon-right"></i> Professional doctors from different departments.</li>
+                        </ul>
+                        <a href="#" class="boxed-btn3-white-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- welcome_docmed_area_end -->
+
+
+
+
+
+{% endblock %}

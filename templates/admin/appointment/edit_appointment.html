@@ -1,0 +1,22 @@
+{% extends "admin/appointment/appointment.html" %}
+{% block content %}
+
+<fieldset><legend>ADD Appointment</legend>
+
+   <form method="POST" action="{% url 'updateappointment' id=form.id %}">
+
+       {% csrf_token %}
+       <table><tr>
+           <td> Name </td><td>:</td><td><input type="text" value="{{ form.name }}" /></td></tr>
+           <tr><td> Phone </td><td>:</td><td><input type="text" value="{{ form.phone }}" /></td></tr>
+<!--            <tr><td> Doctor </td><td>:</td><td><input type="text" value="{{ form.doctor }}" /></td></tr>-->
+            <tr><td> Date </td><td>:</td><td><input type="text" value="{{ form.date }}" /></td></tr>
+            <tr><td> Time </td><td>:</td><td><input type="text" value="{{ form.time }}" /></td></tr>
+           <tr><td> Notes </td><td>:</td><td><input type="text" value="{{ form.note }}" /></td></tr>
+            <input type="submit" value="Save">
+
+       </table>
+   </form>
+       </fieldset>
+
+{% endblock %}

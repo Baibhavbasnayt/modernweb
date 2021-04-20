@@ -1,0 +1,73 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<!--inner banner-->
+
+ <div class="bradcam_area breadcam_bg_2 bradcam_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>contact</h3>
+                        <p><a href="{% url 'index' %}">Home /</a> Appointment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content padding-0">
+  <section class="appointment-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"><img src="{% static 'heartcare/images/form-pic.jpg' %}" alt=""></div>
+        <div class="col-md-6">
+          <form method="POST" enctype = "multipart/form-data">
+            {% csrf_token %}
+             <br> <h2>Appointment</h2>
+            <!--<div class="app-form"><br>-->
+              <!--<div class="col-md-6 col-sm-6">-->
+                <!--<input class="form-control" placeholder="Full Name *" type="text" name="name">{{ form.name }}-->
+              <!--</div><br>-->
+              <!--<div class="col-md-6 col-sm-6">-->
+                <!--<input class="form-control" placeholder="Your Phone *" type="text" name="phone">{{ form.number }}-->
+              <!--</div><br>-->
+              <!--<div class="col-md-6 col-sm-6">-->
+                <!--<select name="doctor">-->
+                  <!--<option disabled>&#45;&#45;Doctor&#45;&#45;</option>-->
+                  <!--{% for doctor in experts %}-->
+                  <!--<option value="{{ doctor.id }}">{{ doctor.name }}</option>-->
+                  <!--{% endfor %}-->
+                <!--</select>{{ form.doctor }}-->
+              <!--</div><br>-->
+              <!--<div class="col-md-6 col-sm-6">-->
+                <!--<div class="input-group date">-->
+                  <!--<input placeholder="Date *" name="date" class="form-control" type="date">{{ form.date }}-->
+                  <!--<span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span> </div>-->
+              <!--</div><br>-->
+              <!--<div class="col-md-6 col-sm-6">-->
+                <!--<select name="time">-->
+                  <!--<option disabled>&#45;&#45;Time&#45;&#45;</option>-->
+                  <!--<option value="morning">Morning</option>-->
+                  <!--<option value="morning">Evening</option>-->
+                <!--</select>{{ form.time }}-->
+              <!--</div><br>-->
+              <!--<div class="col-md-12">-->
+                <!--<textarea placeholder="Extra Note" name="note"></textarea>{{ form.note }}-->
+              <table>
+                  {{form.as_table}}
+              </table>
+                <input value="Book Appointment" type="submit">
+              <!--</div>-->
+            <!--</div>-->
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!--Main Content End-->
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "admin/department/department.html" %}
+{% block content %}
+
+<fieldset><legend>ADD DEPARTMENT</legend>
+
+   <form method="POST" action="{% url 'updatedepartment' id=form.id %}">
+
+       {% csrf_token %}
+       <table><tr>
+           <td> Name </td><td>:</td><td><input type="text" value="{{ form.name }}" /></td></tr>
+           <tr><td> Image </td><td>:</td><td><input type="file" value="{{ form.pictures.url }}" /></td></tr>
+            <input type="submit" value="Save">
+
+       </table>
+   </form>
+       </fieldset>
+
+{% endblock %}
